@@ -26,3 +26,10 @@ let scrape = async(url) => {
 scrape(url);
 
 // still not sure where you specify async in regards to page.evaluate()
+// does each selector grab really need its own await page.evaluate() function ??
+
+// resources:
+// https://github.com/CodeDraken/puppeteer-example/blob/master/index.js
+// https://medium.com/@e_mad_ehsan/getting-started-with-puppeteer-and-chrome-headless-for-web-scrapping-6bf5979dee3e
+// https://github.com/emadehsan/thal/blob/master/index.js#L34
+// puppeteer API https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pageevalselector-pagefunction-args
