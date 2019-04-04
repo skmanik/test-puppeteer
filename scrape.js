@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
 
 let url = "https://apps.des.wa.gov/DESContracts/Home/ContractSummary/08613";
 
-let scrape = async (url) => {
+let scrape = async(url) => {
 	const browser = await puppeteer.launch({headless: false});
 	const page = await browser.newPage();
 
@@ -16,10 +16,13 @@ let scrape = async (url) => {
 
 	// testing grab data
 	const test = await page.evaluate(() => {
-      return "Hello";
+		let foo = document.querySelector(".body-content .row .h3").innerText;
+		return foo;
     });
 
     console.log(test);
 }
 
 scrape(url);
+
+// still not sure where you specify async in regards to page.evaluate()
